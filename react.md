@@ -22,7 +22,7 @@
   
 ## props란 ?
 ### 사용법
- - 컴포넌트 내부에서 코드를 작성한다 << 컴포넌트 이해 필요
+ - 컴포넌트 내부에서 코드를 작성한다 << 컴포넌트(재사용이 가능한 독립 모듈)
     
 
         <Hello name="아무거나">    
@@ -53,3 +53,43 @@
 
 ### Props.children
 - 컴포넌트 태그 사이에 값이 있을때 'children'이란 예약어를 사용한다.
+
+
+## 조건부 렌더링
+- javascript에서는 null, false, undefined를 렌더링 하면 아무것도 나타나지 않는다.
+- 삼항연산자를 이용해 조건부 렌더링 가능
+        
+
+        <div style={{color}}>
+            { isSpecial ? <b>*</b> : null}
+            안녕하세요 {name}
+        </div>
+
+- &&를 사용할 경우
+    
+
+    &&를 사용하면 첫번째로 나오는 false 값을 반환하며, 없다면 마지막 값을 반환
+
+        <div style={{color}}>
+            { isSpecial && <b>*</b>}
+            안녕하세요 {name}
+        </div>
+
+## useState
+### 화살표 함수
+- 형태
+  
+
+  React에서 이벤트 설정을 주로 on이벤트 이름 = "{싱행하고 싶은 함수}" 형태로 작성
+
+        const funcName () => {
+            //body
+        }
+
+### state 선언 방식
+
+        
+        const [number, setNumber] = useState(0);
+            return {
+                <div>{number}</div>
+            }
