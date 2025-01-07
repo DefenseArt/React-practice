@@ -124,3 +124,22 @@
         }
 
         export default InputSample;
+
+## onChange
+- 변할때마다 실행
+- 주로 input 태그의 이벤트 값을 받아와서 name과 value를 비구조화 할당을 통해 추출
+        
+        const onChange = (e) => {
+            const {value, name} = e.target;
+            setInputs({
+                ...inputs,
+                [name]: value
+            });
+        };
+## onClick
+- 클릭되면 실행된다
+
+        <button onClick={onReset}>초기화</button>
+### 정리
+- 비구조화 할당: 객체를 추출하는 방법
+- 구조분해 할당: 객체나 배열을 변수로 분해할 수 있게 해주는 특별한 문법
