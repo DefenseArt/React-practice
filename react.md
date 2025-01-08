@@ -1,4 +1,26 @@
 # React 정리
+### 목차
+
+
+[1. JSX ](#jsx란-)
+
+
+[2. JSX의 기본 규칙](#jsx의-기본-규칙)
+
+[3. props](#props란-)
+
+[4. 조건부 렌더링](#조건부-렌더링)
+
+[5. useState](#usestate)
+
+[6. input](#input)
+
+[7. onChange](#onchange)
+
+[8. onClick](#onclick)
+
+[9. useRef](#useref)
+
 
 ## JSX란 ?
  - 리액트 컴포넌트에서 xml 형식의 값을 반환하는 것
@@ -144,7 +166,7 @@
 - 비구조화 할당: 객체를 추출하는 방법
 - 구조분해 할당: 객체나 배열을 변수로 분해할 수 있게 해주는 특별한 문법
 
-##useRef
+## useRef
 - javasrcipt에서 특정 Dom을 선택하는 역할 ex) getElementByld, querySelector
 - 특정 DOM에 접근할 때 사용
 - 외부 라이브러리 사용할때 유용
