@@ -143,3 +143,21 @@
 ### 정리
 - 비구조화 할당: 객체를 추출하는 방법
 - 구조분해 할당: 객체나 배열을 변수로 분해할 수 있게 해주는 특별한 문법
+
+##useRef
+- javasrcipt에서 특정 Dom을 선택하는 역할 ex) getElementByld, querySelector
+- 특정 DOM에 접근할 때 사용
+- 외부 라이브러리 사용할때 유용
+- 원하는 위치에 ref={}의 형태로 작성
+- 포커스를 잡으려면 nameInput.current.focus()형태로 작성
+
+        const nameInput = useReft();
+
+        const onClick = () => {
+            nameInput.current.focus();
+        }
+
+        return( 
+            <input ref={nameInput} />
+            <button onClick={onClick}>클릭</button>
+        )
