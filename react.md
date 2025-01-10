@@ -175,6 +175,7 @@
 - 원하는 위치에 ref={}의 형태로 작성
 - 포커스를 잡으려면 nameInput.current.focus()형태로 작성
 
+
         const nameInput = useReft();
 
         const onClick = () => {
@@ -185,6 +186,10 @@
             <input ref={nameInput} />
             <button onClick={onClick}>클릭</button>
         )
+
+### useRef의 또 다른 역할
+- 컴포넌트 안에서 조회 및 수정 할 수 있는 변수 관리
+- useRef로 관리되는 변수는 값이 바뀌어도 컴포넌트가 리렌더링 되지 않습니다.
 
 ## Map을 이용한 렌더링
 - arr.map(i => )의 형태로 하위 컴포넌트에게 값을 전달해준다.
