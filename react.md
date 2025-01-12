@@ -25,6 +25,8 @@
 
 [11. 배열](#배열)
 
+[12. useEffect](#useeffect)
+
 
 ## JSX
  - 리액트 컴포넌트에서 xml 형식의 값을 반환하는 것
@@ -212,3 +214,21 @@
             
             <button onClick={() => onRemove(param)}>
 - input에서 onClick의 event 객체의 경우 위와 같이 변수로 전달해줄 필요 없다. (class형에서는 어떻게 동작할지 알아봐야함)
+
+### 수정
+- 수정할 때 불변성을 지켜준다
+  - 불변성을 지킨다는건 state값을 유지한다고 생각
+- 수정할 때 map과 if 문을 비교하여 setState를 활용
+- style 속성에도 js 사용 가능
+- boolean값으로 on/off 할 때 onToggle 이란 함수명을 자주 사용
+
+## useEffect
+### 용어
+- 마운트: 처음 나타남
+- 언마운트: 사라짐
+### useEffect 구조
+- 함수
+- 첫번째 인자는 함수, 두번째 인자는 배열(주로 deps라고 칭함)이 들어간다
+### cleanup 함수
+- useEffect 안에서 return 할 때 실행
+- useEffect의 뒷정리를 한다 => state에서 값 지울때 실행
