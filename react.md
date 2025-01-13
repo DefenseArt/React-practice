@@ -27,6 +27,7 @@
 
 [12. useEffect](#useeffect)
 
+[13. useMemo](#usememo)
 
 ## JSX
  - 리액트 컴포넌트에서 xml 형식의 값을 반환하는 것
@@ -232,3 +233,10 @@
 ### cleanup 함수
 - useEffect 안에서 return 할 때 실행
 - useEffect의 뒷정리를 한다 => state에서 값 지울때 실행
+
+## useMemo
+- 성능을 최적화할 때 사용
+- Memo는 memorized 약자
+- 첫번째 인수에는 함수, 두번째 인수에는 배열
+    - 두번째 인수에 넣어준 배열의 값이 바뀔때만 함수가 실행
+    - 그렇지 않다면 이전의 값을 재사용
