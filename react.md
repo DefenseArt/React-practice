@@ -31,6 +31,8 @@
 
 [14. useCallback](#usecallback)
 
+[15. React.memo](#reactmemo를-통한-최적화)
+
 ## JSX
  - 리액트 컴포넌트에서 xml 형식의 값을 반환하는 것
 
@@ -245,3 +247,5 @@
 ## useCallback
 - useMemo와 비슷하다 -> useMemo 기반으로 만들어졌기 때문에
 - 첫번째 인수에 함수, 두번째 인수에 상태 props에서 사용하는 배열 넣는다
+## React.memo를 통한 최적화
+- React.memo()안에 컴포넌트(여기서는 함수)를 인자로 넣는다.
