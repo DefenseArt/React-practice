@@ -1,9 +1,7 @@
 # React 정리
 ### 목차
 
-
 [1. JSX ](#jsx란-)
-
 
 [2. JSX의 기본 규칙](#jsx의-기본-규칙)
 
@@ -32,6 +30,8 @@
 [14. useCallback](#usecallback)
 
 [15. React.memo](#reactmemo를-통한-최적화)
+
+[16. useReducer](#usereducer)
 
 ## JSX
  - 리액트 컴포넌트에서 xml 형식의 값을 반환하는 것
@@ -249,3 +249,15 @@
 - 첫번째 인수에 함수, 두번째 인수에 상태 props에서 사용하는 배열 넣는다
 ## React.memo를 통한 최적화
 - React.memo()안에 컴포넌트(여기서는 함수)를 인자로 넣는다.
+## useReducer
+- 현재 컴포넌트가 아닌 다른 곳에 state를 저장하고 싶을때 유용함
+### useReducer를 위한 함수
+- reducer라는 함수를 만들고 state와 action 이라는 인자를 받는다.
+    - reducer 라는 함수는 예약어가 아니여서 다른 이름으로 만들 수 있다. (하지만 reducer로 사용하는게 좋음)
+- action에는 객체가 전달되는데 그 안에 type 이라는 프로퍼티를 주로 설정해서 사용 (?프로퍼티)
+- type 프로퍼티를 통해 switch 문으로 분기한다.
+- state는 useReducer를 통해 저장된 변수다.
+- 주로 initialState라는 객체에 초기 정보를 담고 useReducer 에게 전달
+### useReducer 형태
+        const [state, dispatch] = useReducer(reducer, initialState);
+- 과연 dispatch는 고정인가 ? 확인 유무 필요
