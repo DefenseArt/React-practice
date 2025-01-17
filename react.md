@@ -33,6 +33,8 @@
 
 [16. useReducer](#usereducer)
 
+[17. 커스텀 Hooks](#커스텀-hooks)
+
 ## JSX
  - 리액트 컴포넌트에서 xml 형식의 값을 반환하는 것
 
@@ -251,6 +253,7 @@
 - React.memo()안에 컴포넌트(여기서는 함수)를 인자로 넣는다.
 ## useReducer
 - 현재 컴포넌트가 아닌 다른 곳에 state를 저장하고 싶을때 유용함
+- 복잡한 상태 관리
 ### useReducer를 위한 함수
 - reducer라는 함수를 만들고 state와 action 이라는 인자를 받는다.
     - reducer 라는 함수는 예약어가 아니여서 다른 이름으로 만들 수 있다. (하지만 reducer로 사용하는게 좋음)
@@ -261,3 +264,7 @@
 ### useReducer 형태
         const [state, dispatch] = useReducer(reducer, initialState);
 - 과연 dispatch는 고정인가 ? 확인 유무 필요
+## 커스텀 Hooks
+- 반복되는 로직을 쉽게 재사용
+- use 라는 키워드로 시작하는 파일을 만들고 그 안 함수 작성
+- 그 안에서 useState, useEffect, useReducer, useCallback 등 Hooks 를 사용하여 원하는 기능을 구현해주고 컴포넌트에서 사용하고 싶은 값들을 반환
