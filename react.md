@@ -35,6 +35,8 @@
 
 [17. 커스텀 Hooks](#커스텀-hooks)
 
+[18. Context API](#context-api)
+
 ## JSX
  - 리액트 컴포넌트에서 xml 형식의 값을 반환하는 것
 
@@ -268,3 +270,15 @@
 - 반복되는 로직을 쉽게 재사용
 - use 라는 키워드로 시작하는 파일을 만들고 그 안 함수 작성
 - 그 안에서 useState, useEffect, useReducer, useCallback 등 Hooks 를 사용하여 원하는 기능을 구현해주고 컴포넌트에서 사용하고 싶은 값들을 반환
+## Context API
+React에서 컴포넌트 간에 상태(state), 함수(dispatch)를 효율적으로 공유할 수 있도록 도와주는 API
+- 기본 사용법
+        
+
+        const MyContext = React.createContext(defaultValue);
+
+- useReducer 과 함께 사용하면 더욱 편리해짐 
+
+        const [state, dispatch] = useReducer(reducer, initialState);
+- `state`: 현재 상태
+- `dispatch`: 상태를 업데이트 하는 함수
