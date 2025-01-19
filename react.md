@@ -37,6 +37,7 @@
 
 [18. Context API](#context-api)
 
+[19. Immer](#immer)
 ## JSX
  - 리액트 컴포넌트에서 xml 형식의 값을 반환하는 것
 
@@ -282,3 +283,10 @@ React에서 컴포넌트 간에 상태(state), 함수(dispatch)를 효율적으�
         const [state, dispatch] = useReducer(reducer, initialState);
 - `state`: 현재 상태
 - `dispatch`: 상태를 업데이트 하는 함수
+
+## Immer
+- 상태를 직접 수정하지 않고 새로운 객체/배열을 만들어 변경해야 함
+- spread 연산자(...), map, filter, concat 등을 사용하여 새로운 상태 생성
+### 언제 사용할까 ?
+- 간단한 변경 → map, filter, spread 사용
+- 복잡한 구조 변경 → Immer 사용
