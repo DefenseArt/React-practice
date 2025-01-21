@@ -295,3 +295,6 @@ React에서 컴포넌트 간에 상태(state), 함수(dispatch)를 효율적으�
 - 클래스형 컴포넌트는 render()에서 JSX 반환
 - 상태는 this.state로 관리 변경할 때 this.setState()
 - 이벤트 핸들러 사용할 때 this 바인딩 필요
+
+## LifeCycle Method
+- 생명주기 메소드 컴포넌트가 브라우저 상에 나타나고 업데이트되고 사라지게 될 때 호출되는 메소드
